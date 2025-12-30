@@ -13,19 +13,26 @@
       "default": "./dist/index.js"
     }
   },
-  "files": ["dist", "src", "README.md", "LICENSE"],
+  "files": [
+    "dist",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
     "build": "tsc -p tsconfig.json"
   },
-  "keywords": ["hostctl"],
+  "keywords": [
+    "hostctl"
+  ],
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "hostctl": "file:../hostctl"
+    "hostctl": "^0.1.48"
   },
   "devDependencies": {
-    "typescript": "^5.8.3",
-    "@types/node": "^24.0.0"
+    "@types/node": "^24.0.0",
+    "typescript": "^5.8.3"
   },
   "engines": {
     "node": ">=24"

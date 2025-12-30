@@ -10,6 +10,13 @@ npm run build
 hostctl tasks .
 ```
 
+## Conventions
+
+- Tasks live under `src/tasks/` and export a default `task(...)`.
+- `src/index.ts` re-exports tasks and publishes the registry for discovery.
+- Task names are unqualified; the registry assigns qualified names.
+- Schema helpers come from `hostctl` (re-exported `zod`) and are attached to tasks.
+
 ### Compose deploy
 
 ```bash
@@ -80,3 +87,8 @@ Then run from the registry:
 ```bash
 npx hostctl run hostctl-docker docker.compose.deploy compose_path:/opt/app/docker-compose.yml
 ```
+
+## About
+
+This package was scaffolded by `hostctl pkg create`. See
+`docs/task-package-authoring.md` in the hostctl repository for guidance.
