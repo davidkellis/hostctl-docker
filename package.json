@@ -1,0 +1,36 @@
+{
+  "name": "hostctl-docker",
+  "version": "0.1.0",
+  "description": "hostctl tasks for Docker, Compose, and Swarm",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": ["dist", "src", "README.md", "LICENSE"],
+  "scripts": {
+    "build": "tsc -p tsconfig.json"
+  },
+  "keywords": ["hostctl"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "hostctl": "file:../hostctl"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.3",
+    "@types/node": "^24.0.0"
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
